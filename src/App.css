@@ -24,6 +24,7 @@
 .form-wrapper form input {
   padding: 15px;
   border: none;
+  outline: none;
   border-bottom: 1px solid #a7bcff;
 }
 
@@ -215,4 +216,46 @@
 .home .container .chat .chat-icons img{
   height: 24px;
   cursor: pointer;
+}
+/* messages */
+.home .container .chat .messages {
+  background-color: #ddddf7;
+  padding: 10px;
+  height: calc(100% - 160px);
+}
+/* input send messages */
+.home .container .chat .input {
+  background-color: white;
+  padding: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home .container .chat .input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #2f2d52;
+  font-size: 18px;
+}
+.home .container .chat .input input::placeholder {
+  color: lightgray;
+}
+.home .container .chat .input .send {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.home .container .chat .input .send img{
+  height: 24px;
+  cursor: pointer;
+}
+.home .container .chat .input .send button{
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  background-color: #8da4f1;
+  cursor: pointer;
+  border-radius: 5px;
 }
