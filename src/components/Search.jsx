@@ -4,7 +4,7 @@ export const Search = () => {
   return (
     <div className="search">
       <div className="search-form">
-        <input type="text" placeholder='find a user'/>
+        <input type="text" placeholder='Find a user'/>
       </div>
       <div className="user-chat">
         <img src="http://placeimg.com/640/480/people" alt="" />
