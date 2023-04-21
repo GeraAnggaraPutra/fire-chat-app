@@ -31,7 +31,7 @@ const Input = () => {
           //TODO:Handle Error
         },
         () => {
-          getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+          getDownloadURL(storageRef).then(async (downloadURL) => {
             await updateDoc(doc(db, "chats", data.chatId), {
               messages: arrayUnion({
                 id: uuid(),
