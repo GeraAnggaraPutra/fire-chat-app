@@ -34,7 +34,7 @@ export const Register = () => {
                 setErr(true)
               },
               () => {
-                getDownloadURL(uploadTask.snapshot.ref).then(async(downloadURL) => {
+                getDownloadURL(storageRef).then(async(downloadURL) => {
                     await updateProfile(res.user, {
                         displayName,
                         photoURL: downloadURL
@@ -46,7 +46,7 @@ export const Register = () => {
                         photoURL: downloadURL,
                     });
                   
-                  await setDoc(doc(db, "userChats", res.user.uid, {}));
+                  await setDoc(doc(db, "userChats", res.user.uid), {});
                   navigate('/')
                 });
               }
