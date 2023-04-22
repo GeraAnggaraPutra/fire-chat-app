@@ -194,6 +194,10 @@
 .home .container .sidebar .chats .user-chat-info p {
   font-size: 14px;
   color: lightgray;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 270px;
 }
 
 .home .container .sidebar .chats .user-chat {
@@ -256,9 +260,15 @@
   background-color: white;
   padding: 10px 20px;
   border-radius: 10px 0px 10px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 600px;
 }
 .home .container .chat .messages .message.owner .message-content {
   align-items: flex-end;
+  max-width: 600px;
+ 
 }
 .home .container .chat .messages .message .message-info{
   display: flex;
@@ -274,7 +284,7 @@
   object-fit: cover;
 }
 .home .container .chat .messages .message .message-content{
-  max-width: 80%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -283,7 +293,10 @@
   background-color: #8da4f1;
   padding: 10px 20px;
   border-radius: 0px 10px 10px 10px;
-  max-width: max-content;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 600px;
 }
 .home .container .chat .messages .message .message-content img{
   width: 50%;
