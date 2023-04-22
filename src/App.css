@@ -265,6 +265,7 @@
   flex-direction: column;
   color: gray;
   font-weight: 300;
+  align-items: flex-end;
 }
 .home .container .chat .messages .message .message-info img{
   width: 40px;
