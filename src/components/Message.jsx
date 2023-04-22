@@ -13,11 +13,20 @@ const Message = ({ message }) => {
     const messageTime = new Date(
       message.date.seconds * 1000 + message.date.nanoseconds / 1000000
     );
-    const messageTimeString = messageTime.toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-    setTime(messageTimeString);
+    const now = new Date();
+    const diff = now.getTime() - messageTime.getTime();
+
+    if (diff < 60000) {
+      setTime("just now");
+    } else {
+      setTime(
+        messageTime.toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        })
+      );
+    }
+
 
     ref.current?.scrollIntoView({ behavior: "smooth" });
   }, [message]);
@@ -36,7 +45,7 @@ const Message = ({ message }) => {
           }
           alt=""
         />
-        <span>{time || "just now"}</span>
+        <span>{time}</span>
       </div>
       <div className="message-content">
         <p>{message.text}</p>
