@@ -8,3 +8,5 @@
 ## Check the result on desktop <a href="https://fire-chat-gera.netlify.app/">click here!</a>
 
 ## How to use it first you have to log in first and then find a user who already has an account, for example you can search & chat user "gera", "anggara" to test it.
+
+#### Don't use chrome
